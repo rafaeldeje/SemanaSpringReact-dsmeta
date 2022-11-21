@@ -34,7 +34,7 @@ public class SmsService {
         PhoneNumber to = new PhoneNumber(twilioPhoneTo);
         PhoneNumber from = new PhoneNumber(twilioPhoneFrom);
 
-        Message message = Message.creator(to, from, "Oi meu amor").create();
+        Message message = Message.creator(to, from, "Oi benzinho").create();
 
         System.out.println(message.getSid());
         System.out.println(message);
@@ -44,7 +44,7 @@ public class SmsService {
 
         Sale sale = repository.findById(saleId).get();
 
-        String msg ="Nome do Vendedor:"+ sale.getSellerName() + " | Vendedor ID: " + sale.getId();
+        String msg ="O vendedor:"+ sale.getSellerName() + " | Vendedor ID: " + sale.getId();
 
         Twilio.init(twilioSid, twilioKey);
 
